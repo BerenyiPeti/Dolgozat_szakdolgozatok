@@ -21,6 +21,8 @@
               <td>{{a.githublink}}</td>
               <td>{{a.oldallink}}</td>
               <td>
+                <button (click)="onModositas(a)" class="btn btn-primary">Módosítás</button>
+                <button class="btn btn-danger">Törlés</button>
               </td>
             </tr>
           </tbody>
@@ -28,3 +30,32 @@
       </div>
     </div>
   </div>
+<!--   form -->
+  <form name="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="container">
+      <hr />
+      <div class="row">
+        <div class="col-md-12">
+          <span>Szakdolgozat címe</span>
+          <input type="text" class="form-control" name="cimInput" [(ngModel)]="cim"/>
+        </div>
+        <div class="col-md-12">
+          <span>Készítők neve</span> <input type="text" class="form-control" name="keszitokInput" [(ngModel)]="keszitok"/>
+        </div>
+        <div class="col-md-12">
+          <span>Az oldal elérhetősége</span>
+          <input type="text" class="form-control" name="elerhetosegInput" [(ngModel)]="elerhetoseg"/>
+        </div>
+        <div class="col-md-12">
+          <span>GitHub elérhetőség</span>
+          <input type="text" class="form-control" name="githubInput" [(ngModel)]="github"/>
+        </div>
+        <div class="col-md-12">
+          <br>
+          <button *ngIf="!modositas" class="btn btn-primary" type="submit">Új</button>
+          <button *ngIf="modositas" class="btn btn-success" type="submit">Módosítás</button>
+          <button *ngIf="modositas" (click)="onMegse()" class="btn btn-danger" type="button">Mégse</button>
+        </div>
+      </div>
+    </div>
+  </form>
