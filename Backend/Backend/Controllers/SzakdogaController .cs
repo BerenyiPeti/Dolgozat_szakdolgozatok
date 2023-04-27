@@ -42,10 +42,20 @@ namespace Backend.Controllers
         [HttpPost]
         public async Task<ActionResult<List<Szakdolgozat>>> ujSzakdoga(Szakdolgozat sz)
         {
-            _context.Szakdolgozatok.Add(sz);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.Szakdolgozatok.Add(sz);
+                await _context.SaveChangesAsync();
+                return Ok(await _context.Szakdolgozatok.ToListAsync());
+            }
+            catch (Exception e)
+            {
 
-            return Ok(await _context.Szakdolgozatok.ToListAsync());
+                return BadRequest(e);
+            }
+            
+
+            
         }
     }
 }

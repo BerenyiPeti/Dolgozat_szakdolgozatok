@@ -1,5 +1,5 @@
 export interface Szakdoga{
-    id: number,
+    id?: number,
     szakdoga_nev: string,
     githublink: string,
     oldallink: string,

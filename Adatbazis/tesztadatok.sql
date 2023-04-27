@@ -1,0 +1,2 @@
+insert into Szakdolgozatok values('Atlantis Mozi', 'githublink1', '-weboldal', 'Váradi Ákos, Szikora Melinda, Szabó Anett'),
+								 ('Autókölcsönzõ', 'githublink2', '-weboldal', 'Hecz Klaudia, Illés Leila, Ménesi Csaba')

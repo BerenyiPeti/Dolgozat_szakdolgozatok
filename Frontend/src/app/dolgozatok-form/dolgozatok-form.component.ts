@@ -30,7 +30,7 @@ export class DolgozatokFormComponent implements OnInit, OnDestroy {
   tesztadatok: Szakdoga[] = [{ id: 1, githublink: 'github1', oldallink: 'oldallink1', szakdoga_nev: 'cim1', tagokneve: 'tagok1' }, { id: 2, githublink: 'github2', oldallink: 'oldallink2', szakdoga_nev: 'cim2', tagokneve: 'tagok2' }]
 
   ngOnInit(): void {
-    this.adatok = this.tesztadatok
+    //this.adatok = this.tesztadatok
     /* this.dataFetchSub = this.dsService.fetchRows().subscribe((data) => {
       console.log(data);
 
@@ -53,7 +53,16 @@ export class DolgozatokFormComponent implements OnInit, OnDestroy {
 
   onSubmit(form: NgForm) {
     console.log(form.value);
-    this.dsService.ujSzakdoga(form.value)
+    let nev = form.value.cimInput
+    let git = form.value.githubInput
+    let oldal = form.value.elerhetosegInput
+    let tagok = form.value.keszitokInput
+    this.dsService.ujSzakdoga({ 
+      githublink: git,
+      oldallink: oldal,
+      szakdoga_nev: nev,
+      tagokneve: tagok
+    })
 
   }
 

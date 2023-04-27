@@ -29,14 +29,20 @@ export class DataStorageService {
                 next: (data) => this.dolServ.setAdatok(data.slice()),
                 error: (error) => console.log(error),
             })
-        )
-            .subscribe();
+        ).subscribe();
     }
 
     ujSzakdoga(sz: Szakdoga) {
-    this.http
-      .post<Szakdoga>(URL + '/szakdoga', {
-        id: sz.id,
+        let asd = {
+            cim: sz.szakdoga_nev,
+            git: sz.githublink,
+            oldal: sz.oldallink,
+            tagok: sz.tagokneve
+          }
+        console.log(asd);
+        
+    this.http.post<Szakdoga>(URL + '/szakdoga', {
+        id: 1,
         cim: sz.szakdoga_nev,
         git: sz.githublink,
         oldal: sz.oldallink,
