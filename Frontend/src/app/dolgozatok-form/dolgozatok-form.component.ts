@@ -53,6 +53,7 @@ export class DolgozatokFormComponent implements OnInit, OnDestroy {
 
   onSubmit(form: NgForm) {
     console.log(form.value);
+    this.dsService.ujSzakdoga(form.value)
 
   }
 

@@ -19,4 +19,9 @@ export class DolgozatokService {
     getAdatok() {
         return this.adatok.slice()
     }
+
+    ujSzakdoga(sz: Szakdoga) {
+        this.adatok.push(sz);
+        this.dataChanged.next(this.adatok.slice());
+    }
 }

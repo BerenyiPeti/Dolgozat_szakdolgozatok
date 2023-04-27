@@ -1,6 +1,8 @@
 ﻿using Backend.Data;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Backend.Controllers
 {
@@ -37,5 +39,13 @@ namespace Backend.Controllers
             }
         }
 
+        [HttpPost]
+        public async Task<ActionResult<List<Szakdolgozat>>> ujSzakdoga(Szakdolgozat sz)
+        {
+            _context.Szakdolgozatok.Add(sz);
+            await _context.SaveChangesAsync();
+
+            return Ok(await _context.Szakdolgozatok.ToListAsync());
+        }
     }
 }

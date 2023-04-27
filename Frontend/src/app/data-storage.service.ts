@@ -33,6 +33,35 @@ export class DataStorageService {
             .subscribe();
     }
 
+    ujSzakdoga(sz: Szakdoga) {
+    this.http
+      .post<Szakdoga>(URL + '/szakdoga', {
+        id: sz.id,
+        cim: sz.szakdoga_nev,
+        git: sz.githublink,
+        oldal: sz.oldallink,
+        tagok: sz.tagokneve
+      })
+      .pipe(
+        tap({
+          next: (res) => {
+            let uj = {
+              id: res[0].id,
+              szakdoga_nev: res[0].cim,
+              githublink: res[0].git,
+              oldallink: res[0].oldal,
+              tagokneve: res[0].tagok
+            };
+            console.log(uj);
+
+            this.dolServ.ujSzakdoga(uj);
+          },
+          error: (error) => console.log(error),
+        })
+      )
+      .subscribe();
+  }
+
     /* fetchRows() {
         return this.http.get('https://localhost:7258/szakdogak')
     } */
