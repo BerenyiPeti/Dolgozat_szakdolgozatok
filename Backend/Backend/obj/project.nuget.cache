@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wZowtq7yGMm/tC7wA2DeEHhL68MtzzdyIpuUvCm/veRxBcdqSlnvNWe9lDYYuWoFqtIaLazOOqEv+QlmacLb4w==",
+  "dgSpecHash": "i5bVq0/0sfd2cMdwkgKhJup1RTaPg2iAukw+IeWoSfpcC1SPMFJIqcXAYanbE9xTaNX4soDQKJLQbn/3PHaTxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\BerényPéterFerenc(SZ\\Documents\\dolgozat_04_27\\Backend\\Backend\\Backend.csproj",
+  "projectFilePath": "C:\\Users\\BerényPéterFerenc(SZ\\Documents\\dolgozat_04_27\\Backend\\Backend\\Szakdolgozatok.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BerényPéterFerenc(SZ\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\BerényPéterFerenc(SZ\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

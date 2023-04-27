@@ -15,11 +15,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+            <tr *ngFor="let a of adatok">
+              <td>{{a.szakdoga_nev}}</td>
+              <td>{{a.tagokneve}}</td>
+              <td>{{a.githublink}}</td>
+              <td>{{a.oldallink}}</td>
               <td>
               </td>
             </tr>

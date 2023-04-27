@@ -3729,9 +3729,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BerényPéterFerenc(SZ\\Documents\\dolgozat_04_27\\Backend\\Backend\\Backend.csproj",
-      "projectName": "Backend",
-      "projectPath": "C:\\Users\\BerényPéterFerenc(SZ\\Documents\\dolgozat_04_27\\Backend\\Backend\\Backend.csproj",
+      "projectUniqueName": "C:\\Users\\BerényPéterFerenc(SZ\\Documents\\dolgozat_04_27\\Backend\\Backend\\Szakdolgozatok.csproj",
+      "projectName": "Szakdolgozatok",
+      "projectPath": "C:\\Users\\BerényPéterFerenc(SZ\\Documents\\dolgozat_04_27\\Backend\\Backend\\Szakdolgozatok.csproj",
       "packagesPath": "C:\\Users\\BerényPéterFerenc(SZ\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\BerényPéterFerenc(SZ\\Documents\\dolgozat_04_27\\Backend\\Backend\\obj\\",
       "projectStyle": "PackageReference",
