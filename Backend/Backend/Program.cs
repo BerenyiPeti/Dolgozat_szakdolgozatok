@@ -1,3 +1,6 @@
+using Backend.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Backend
 {
     public class Program
@@ -7,9 +10,10 @@ namespace Backend
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            //builder.Services.AddDbContext</*dbcontext*/>(options =>
-            //    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-            //    );
+            builder.Services.AddDbContext<SzakdolgozatokContext>(options => 
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("SzakdolgozatokConnection"));
+             });
             builder.Services.AddCors(options =>
             {
                 options.AddDefaultPolicy(
