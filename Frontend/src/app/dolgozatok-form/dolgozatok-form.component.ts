@@ -21,6 +21,7 @@ export class DolgozatokFormComponent implements OnInit, OnDestroy {
   dataFetchSub: Subscription
   dataChangedSub: Subscription
 
+  id: number = -1
   cim: string = ''
   keszitok: string = ''
   elerhetoseg: string = ''
@@ -35,14 +36,17 @@ export class DolgozatokFormComponent implements OnInit, OnDestroy {
       console.log(data);
 
     }) */
+    //console.log(this.dolServ.getIndex(12));
+
+
     this.dsService.fetchRows()
 
     this.dataChangedSub = this.dolServ.dataChanged.subscribe((data: Szakdoga[]) => {
       this.adatok = data
-      console.log("data:");
+      /* console.log("data:");
       console.log(data);
       console.log("adatok:");
-      console.log(this.adatok);
+      console.log(this.adatok); */
     })
   }
 
@@ -52,22 +56,41 @@ export class DolgozatokFormComponent implements OnInit, OnDestroy {
 
 
   onSubmit(form: NgForm) {
-    console.log(form.value);
+    console.log("submit");
+    
+    //console.log(form.value);
     let nev = form.value.cimInput
     let git = form.value.githubInput
     let oldal = form.value.elerhetosegInput
     let tagok = form.value.keszitokInput
-    this.dsService.ujSzakdoga({ 
-      githublink: git,
-      oldallink: oldal,
-      szakdoga_nev: nev,
-      tagokneve: tagok
-    })
 
+    if (!this.modositas) {
+      console.log(this.modositas);
+      
+      this.dsService.ujSzakdoga({
+        id: 0,
+        githublink: git,
+        oldallink: oldal,
+        szakdoga_nev: nev,
+        tagokneve: tagok
+      })
+    }
+
+    if (this.modositas) {
+      console.log(this.id);
+      this.dsService.updateSzakdogak({id: this.id, szakdoga_nev: nev, githublink: git, oldallink: oldal, tagokneve: tagok})
+      this.modositas = false
+      this.id = -1
+    }
+
+    form.resetForm()
+    console.log(this.adatok);
+    
   }
 
   onModositas(sz: Szakdoga) {
     this.modositas = true
+    this.id = sz.id
     this.cim = sz.szakdoga_nev
     this.keszitok = sz.tagokneve
     this.elerhetoseg = sz.oldallink
@@ -81,4 +104,21 @@ export class DolgozatokFormComponent implements OnInit, OnDestroy {
     this.elerhetoseg = ''
     this.github = ''
   }
+
+  onTorles(id: number) {
+    //console.log(id);
+    
+    this.dsService.deleteSzakdoga(id)
+  }
+
+  /* teszt() {
+    console.log("getAdatok:");
+    console.log(this.dolServ.getAdatok());
+    console.log("adatok:");
+    console.log(this.adatok);
+    
+    
+    
+  } */
+
 }

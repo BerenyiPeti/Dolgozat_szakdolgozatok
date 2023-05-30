@@ -3724,19 +3724,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\BerényPéterFerenc(SZ\\.nuget\\packages\\": {}
+    "C:\\Users\\Péter\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BerényPéterFerenc(SZ\\Documents\\dolgozat_04_27\\Backend\\Backend\\Szakdolgozatok.csproj",
+      "projectUniqueName": "E:\\Webprogramozás\\Dolgozat_szakdolgozatok\\Backend\\Backend\\Szakdolgozatok.csproj",
       "projectName": "Szakdolgozatok",
-      "projectPath": "C:\\Users\\BerényPéterFerenc(SZ\\Documents\\dolgozat_04_27\\Backend\\Backend\\Szakdolgozatok.csproj",
-      "packagesPath": "C:\\Users\\BerényPéterFerenc(SZ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BerényPéterFerenc(SZ\\Documents\\dolgozat_04_27\\Backend\\Backend\\obj\\",
+      "projectPath": "E:\\Webprogramozás\\Dolgozat_szakdolgozatok\\Backend\\Backend\\Szakdolgozatok.csproj",
+      "packagesPath": "C:\\Users\\Péter\\.nuget\\packages\\",
+      "outputPath": "E:\\Webprogramozás\\Dolgozat_szakdolgozatok\\Backend\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\BerényPéterFerenc(SZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Péter\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3806,7 +3806,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

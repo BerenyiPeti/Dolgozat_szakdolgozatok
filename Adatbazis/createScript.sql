@@ -1,3 +1,5 @@
+create database probavizsga2022
+go
 USE [probavizsga2022]
 GO
 
